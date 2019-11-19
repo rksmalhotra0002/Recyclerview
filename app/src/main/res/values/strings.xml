@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">gridrecyclerview</string>
+    <string name="learn_more">Learn More</string>
+    <string name="color">Color theory talks about the ways in which we use color to create beauty and usability in user interfaces.</string>
+    <string name="color_theory">color Theory</string>
+    <string name="color_101">color 101</string>
+</resources>
