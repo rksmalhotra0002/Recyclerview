@@ -21,7 +21,7 @@ private RecyclerView.Adapter adapter;
     }
     private void getids()
     {
-        recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
+        recyclerView=findViewById(R.id.recyclerview);
       ArrayList<Model>a=new ArrayList<>();
       a.add(new Model("Color 101","Color theory","Color theory talks about the ways in which we use color to create beauty and usability in user interfaces.","Learn More"));
       a.add(new Model("Color 101","Color theory","Color theory talks about the ways in which we use color to create beauty and usability in user interfaces.","Learn More"));
@@ -36,8 +36,6 @@ private RecyclerView.Adapter adapter;
       adapter=new CountryAdapter(a,this);
       recyclerView.setAdapter(adapter);
       recyclerView.setLayoutManager(linearLayoutManager);
-
-
 
     }
 }
