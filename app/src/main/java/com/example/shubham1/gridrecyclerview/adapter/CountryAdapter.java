@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.shubham1.gridrecyclerview.R;
 import com.example.shubham1.gridrecyclerview.basic;
 import com.example.shubham1.gridrecyclerview.model.Model;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
@@ -50,15 +48,12 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         holder.tv_color101.setText("shubham");
         holder.tv_color101.setTextColor(Color.RED);
     }
-      holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(v.getContext(), basic.class);
-                intent.putExtra("title",model.getName());
-                intent.putExtra("titles",model.getDesc());
-                v.getContext().startActivity(intent);
-            }
-        });
+      holder.itemView.setOnClickListener(v -> {
+          Intent intent=new Intent(v.getContext(), basic.class);
+          intent.putExtra("title",model.getName());
+          intent.putExtra("titles",model.getDesc());
+          v.getContext().startActivity(intent);
+      });
     }
 
     @Override
@@ -68,6 +63,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
       private TextView tv_color101,tv_color_theory,tv_desc,learn_more;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_color101=itemView.findViewById(R.id.tv_color101);
