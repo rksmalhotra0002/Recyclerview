@@ -1,21 +1,26 @@
 package com.example.shubham1.gridrecyclerview.adapter;
+import android.app.Activity;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.shubham1.gridrecyclerview.R;
 import com.example.shubham1.gridrecyclerview.basic;
+import com.example.shubham1.gridrecyclerview.interfaces.LoadMore;
 import com.example.shubham1.gridrecyclerview.model.Model;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
+
    private ArrayList<Model>arrayList;
     private Context context;
 
@@ -53,6 +58,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
           intent.putExtra("title",model.getName());
           intent.putExtra("titles",model.getDesc());
           v.getContext().startActivity(intent);
+
       });
     }
 
@@ -70,6 +76,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
             tv_color_theory=itemView.findViewById(R.id.tv_color_theory);
             tv_desc=itemView.findViewById(R.id.tv_desc);
             learn_more=itemView.findViewById(R.id.learn_more);
+
         }
     }
 }
