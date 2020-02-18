@@ -1,23 +1,17 @@
-package com.example.shubham1.gridrecyclerview.adapter;
-import android.app.Activity;
-import android.content.ClipData;
+package com.gridrecyclerview.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.shubham1.gridrecyclerview.R;
-import com.example.shubham1.gridrecyclerview.basic;
-import com.example.shubham1.gridrecyclerview.interfaces.LoadMore;
-import com.example.shubham1.gridrecyclerview.model.Model;
+import com.gridrecyclerview.R;
+import com.gridrecyclerview.ui.basic;
+import com.gridrecyclerview.model.Model;
 import java.util.ArrayList;
-import java.util.List;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
 
@@ -35,7 +29,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview,parent,false);
-        ViewHolder viewHolder=new ViewHolder(view);
+        final ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
@@ -53,6 +47,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         holder.tv_color101.setText("shubham");
         holder.tv_color101.setTextColor(Color.RED);
     }
+
       holder.itemView.setOnClickListener(v -> {
           Intent intent=new Intent(v.getContext(), basic.class);
           intent.putExtra("title",model.getName());

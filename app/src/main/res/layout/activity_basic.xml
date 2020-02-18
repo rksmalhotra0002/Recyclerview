@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shubham1.gridrecyclerview.basic">
+    tools:context="com.gridrecyclerview.ui.basic">
 
     <TextView
         android:id="@+id/tv_txt"
@@ -28,5 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_txt"
          />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

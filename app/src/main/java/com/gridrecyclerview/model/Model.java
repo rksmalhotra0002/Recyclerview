@@ -1,4 +1,4 @@
-package com.example.shubham1.gridrecyclerview.model;
+package com.gridrecyclerview.model;
 
 public class Model {
     private String name,colortheory,desc,learnmore;

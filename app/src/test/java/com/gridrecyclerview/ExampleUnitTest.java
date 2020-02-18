@@ -1,4 +1,4 @@
-package com.example.shubham1.gridrecyclerview;
+package com.gridrecyclerview;
 
 import org.junit.Test;
 

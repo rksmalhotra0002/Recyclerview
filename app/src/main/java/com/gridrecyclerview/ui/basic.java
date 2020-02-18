@@ -1,17 +1,14 @@
-package com.example.shubham1.gridrecyclerview;
+package com.gridrecyclerview.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import butterknife.BindView;
+import com.gridrecyclerview.R;
 
 public class basic extends AppCompatActivity {
 
-  private TextView tv_txt,tv_theory;
-  private String title,theory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +17,10 @@ public class basic extends AppCompatActivity {
     }
     private void getids()
     {
-        tv_txt=(TextView)findViewById(R.id.tv_txt);
-        tv_theory=(TextView)findViewById(R.id.tv_theory);
-        title=getIntent().getStringExtra("title");
-        theory=getIntent().getStringExtra("titles");
+        TextView tv_txt = findViewById(R.id.tv_txt);
+        TextView tv_theory = findViewById(R.id.tv_theory);
+        String title = getIntent().getStringExtra("title");
+        String theory = getIntent().getStringExtra("titles");
         tv_txt.setText(title);
         tv_theory.setText(theory);
     }

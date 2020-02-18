@@ -1,4 +1,4 @@
-package com.example.shubham1.gridrecyclerview;
+package com.gridrecyclerview;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.shubham1.gridrecyclerview", appContext.getPackageName());
+        assertEquals("com.gridrecyclerview", appContext.getPackageName());
     }
 }
